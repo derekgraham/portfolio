@@ -1,0 +1,19 @@
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#filters select {
+  width: 90%;
+  margin: .2em 5%;
+}
+

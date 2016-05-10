@@ -1,64 +1,45 @@
-.site-header {
-  background: #FFEAAA;
-}
 
-/* DONE: Float the main header to the left, to make room for the hamburger menu. */
+
 .heading-group-h1 {
   float: left;
-  padding: 0 0 .2em 1em;
+ 
+  display: inline;
+  width: 100%;
 }
-
-/* TODO: Add styles for the icon-menu class (whether it be the hamburger font
-  or an image of your choosing). It should be bigger, and off to the right. */
-.icon-menu {
-
-}
-
-.main-nav {
-  padding: 0.1em;
-}
-
-.main-nav ul {
-  display: none;
+h1 {
   padding: 0;
-  list-style: none;
-  clear: both;
+  margin: 0px auto;
+  text-align: center;
 }
-
-.main-nav:hover ul {
+h2 {
+  font-size: .8em;
+  text-align: center;
   display: block;
+  padding: .1em;
+  margin: 0px auto;
 }
 
-.main-nav li {
-  margin-right: .4em;
-  font-size: 1.5em;
-  padding: .5em .2em;
-  border-bottom: 1px solid #ccc;
-}
 
-#filters {
+ul {
   padding: 0;
   list-style: none;
+
+  text-align: center;
 }
 
-.template {
-  display: none;
+
+li {
+  display: inline-block;
+  margin-right: .4em;
+  font-size: .8em;
+  border: 2px solid black;
+  padding: .1em;
+  margin: .1em;
+  width: 15%;
 }
 
-.byline {
-  color: #777;
+hr {
+  width: 90%;
+  margin: 0px auto;
 }
 
-.byline a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* TODO: Now add styles for how things should look on a larger screen,
-   (hint: min is in!):
-@media only screen...
-         - Hide the hamburger.
-         - Display our unordered list (aka our nav links).
-         - The main-nav should be all on one row, with padding spaced better
-           for a larger screen.
-*/

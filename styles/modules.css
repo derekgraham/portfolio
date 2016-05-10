@@ -1,5 +1,16 @@
+img {
+}
 
+.about {
+  margin-left: 5%;
+  max-width: 90%;
+}
 
+.about.tagline {
+  text-align: center;
+}
+.about img {
+}
 .heading-group-h1 {
   float: left;
  
@@ -20,6 +31,10 @@ h2 {
 }
 
 
+h4 {
+  margin-bottom: .1em;
+  margin-left: 5%;
+}
 ul {
   padding: 0;
   list-style: none;
@@ -28,14 +43,17 @@ ul {
 }
 
 
-li {
+nav li {
   display: inline-block;
   margin-right: .4em;
   font-size: .8em;
-  border: 2px solid black;
+  border: 1px solid black;
   padding: .1em;
   margin: .1em;
-  width: 15%;
+  width: 16%;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-weight: bold;
 }
 
 hr {
@@ -43,3 +61,11 @@ hr {
   margin: 0px auto;
 }
 
+.skills li {
+  text-align: left;
+  margin-left: 5%;
+}
+.experience li {
+  text-align: left;
+  margin-left: 5%;
+}

@@ -1,67 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Derek Graham</title>
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="vendor/styles/normalize.css">
-    <link rel="stylesheet" href="styles/icons.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/modules.css">
-</head>
-<body>
-    <header class="">
-      <section class="">
+	<head>
+		<title>Derek Graham</title>
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="vendor/styles/normalize.css">
+	    <link rel="stylesheet" href="styles/icons.css">
+	    <link rel="stylesheet" href="styles/base.css">
+	    <link rel="stylesheet" href="styles/layout.css">
+	    <link rel="stylesheet" href="styles/modules.css">
+	</head>
+	<body>
+	    <header class="">
+      		<section class="">
+				<h1>Derek Graham</h1>
+				<h2>web developer &#x2022 maker</h2>
+			</section>
 
-        <h1>Derek Graham</h1>
-        <h2>web developer &#x2022 maker</h2>
-      </section>
-      <hr>
-      <nav class="main-nav">
-        <ul>
-        	<li>About</li>
-<!--         	<li>Analog</li>
- -->        <li>Projects</li>
-        	<li>Skills</li>
-        	<li>Experience</li>
-        </ul>
-      </nav>
-    </header>
-    <section>
-    	<h4>About</h4>
-    	<hr>
-    	<div class="about">
-    	<img src="images/derek_2009_067.jpg">
-    		
-    	<p class="about tagline">I have been a maker my whole life.</p>
-    	<p class="about">I am  seeking new nails for my hammer as I chase ideas from the physical world to the virtual.</p>
-    	<p class="about">Currently learning Web Development at Codefellows.org - Coding 201 and 301.</p>
-    	<br>
-    	<p>Follow me on twitter.</p>
-    	<p>check out my projects on github</p>
-    	</div>
-    </section>
-    <section><h4>Projects</h4><hr>
+			<hr>
+			<nav class="main-nav">
+				<ul>
+					<li>About</li>
+					<li>Projects</li>
+					<li>Skills</li>
+					<li>Experience</li>
+				</ul>
+			</nav>
+	    </header>
+	    <section>
+	    	<h4>About</h4>
+	    	<hr>
+	    	<div class="about">
+		    	<img src="images/derek_2009_067.jpg">
+		    		
+		    	<p class="about tagline">I have been a maker my whole life.</p>
+		    	<p class="about">I am  seeking new nails for my hammer as I chase ideas from the physical world to the virtual.</p>
+		    	<p class="about">Currently learning Web Development at Codefellows.org - Coding 201 and 301.</p>
+		    	<br>
+		    	<p>Follow me on twitter.</p>
+		    	<p>check out my projects on github</p>
+	    	</div>
+	    </section>
+	    <section >
+	    	<h4>Projects</h4><hr>
+	    	<section id='projects'>
+          		<article class="template" data-category="cat">
+					<header>
+						<h5>Title</h5>
+						<div class="byline">
+							By <address><a href="">Author Name</a></address>
+							created <time pubdate datetime="2000-01-01">Publish Time</time>
+						</div>
+	            	</header>
+		            <section class="project-body"></section>
+		            <section class="project-image hidden">
+						<a class='project-image-link' href=""><img class='project-image' src=""></a>
+		            </section>
+		            <section class="project-video hidden">
+			            <video class="project-image" controls>
+						  <source src="" type=""> 
+						Your browser does not support the video tag.
+						</video>	            	
+		            </section>
+		            <section class="project-gallery hidden"></section>
+		            <p class="project-image-title"></p>
+	          </article>
+	    	</section>
+
+	    </section>
+	    <section><h4>Skills</h4><hr>
+	    	<ul class="skills">
+	    		<li>HTML5</li>
+	    		<li>CSS3</li>
+	    		<li>ECMAScript</li>
+	    		<li>jQuery</li>
+	    		<li>Firebase</li>
+	    		<li>Chart.js</li>
+	    	</ul>
 
 
-    </section>
-    <section><h4>Skills</h4><hr>
-    	<ul class="skills">
-    		<li>HTML5</li>
-    		<li>CSS3</li>
-    		<li>ECMAScript</li>
-    		<li>jQuery</li>
-    		<li>Firebase</li>
-    		<li>Chart.js</li>
-    	</ul>
-
-
-    </section>
-    <section><h4>Experience</h4><hr>
-    	<ul class="experience">
-    		<li>Codefellows 201</li>
-    		<li>Codefellows 301</li>
-    	</ul>
-    </section>
-</body>
+	    </section>
+	    <section><h4>Experience</h4><hr>
+	    	<ul class="experience">
+	    		<li>Codefellows 201</li>
+	    		<li>Codefellows 301</li>
+	    	</ul>
+	    </section>
+	    <script type="text/javascript" src='vendor/jquery-2.2.3.js'></script>
+	    <script type="text/javascript" src="scripts/data.js"></script>
+	    <script type="text/javascript" src='scripts/app.js'></script>
+	</body>
 </html>

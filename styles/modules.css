@@ -20,6 +20,9 @@
   margin-top: 1em;
 }
 
+.project-video {
+
+}
 .project-image-title {
   text-align: center;
   font-size: ..9em;
@@ -104,3 +107,17 @@ hr {
 .template {
   display: none;
 }
+
+@media only screen and (min-width: 1000px) {
+#projects article {
+  width: 40%;
+  display: inline-block;
+  height: 650px;
+}
+
+#projects article.template {
+  display: none;
+}
+
+}
+

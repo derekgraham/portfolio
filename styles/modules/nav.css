@@ -5,57 +5,6 @@
     display: none;
 }
 
-.project-body {
-    margin-left: 6%;
-    max-width: 90%;
-}
-
-.byline {
-    margin-left: 5%;
-    font-size: .6em;
-    margin-bottom: 1em;
-}
-
-.project-image {
-    max-width: 80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-}
-
-.project-video {}
-
-.project-image-title {
-    text-align: center;
-    font-size: ..9em;
-    text-transform: lowercase;
-    font-variant: small-caps;
-}
-
-.about {
-    margin-left: 5%;
-    max-width: 90%;
-}
-
-.about.tagline {
-    text-align: center;
-}
-
-.about img {
-  max-height: 350px;
-}
-
-div.about figure {
-  text-align: center;
-}
-
-.heading-group-h1 {
-    float: left;
-    display: inline;
-    width: 100%;
-}
-
 h1 {
     padding: 0;
     margin: 0px auto;
@@ -102,21 +51,10 @@ nav li {
     font-variant: small-caps;
     font-weight: bold;
 }
-
-
-.skills li {
-    text-align: left;
-    margin-left: 5%;
-}
-
-.experience li {
-    text-align: left;
-    margin-left: 5%;
-}
-
-.template {
-    display: none;
-}
+    .tab-content h4 {
+        border-bottom: 1px solid black;
+        margin-bottom: 1em;
+    }
 
 @media only screen and (max-width: 365px) {
   nav li {
@@ -138,13 +76,6 @@ nav li {
 }
 
 @media only screen and (min-width: 780px) {
-    #projects article {
-        width: 40%;
-        display: inline;
-    }
-    #projects article.template {
-        display: none;
-    }
     .top {
         margin: 0 auto;
         width: 100%;
@@ -192,29 +123,7 @@ nav li {
         list-style: none;
         text-align: right;
     }
-    .about img {
-        max-height: 350px;
-    }
-    .about-image {
-        float: left;
-        max-width: 375px;
-        margin-top: 0;
-    }
-    .tab-content h4 {
-        border-bottom: 1px solid black;
-        margin-bottom: 1em;
-    }
-    p.about {
-      margin: 0;
-    }
-    #category-filter {
-      width: 20%;
-      display: inline;
-    }
-    #filters {
-      width: 30%;
-    }
-    div#filters {
-      display: inline-block;
-    }
+
+
+
 }

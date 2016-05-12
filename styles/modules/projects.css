@@ -1,0 +1,49 @@
+
+
+.project-body {
+    margin-left: 6%;
+    max-width: 90%;
+}
+
+.byline {
+    margin-left: 5%;
+    font-size: .6em;
+    margin-bottom: 1em;
+}
+
+.project-image {
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.project-video {}
+
+.project-image-title {
+    text-align: center;
+    font-size: ..9em;
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+
+@media only screen and (min-width: 780px) {
+    #projects article {
+        width: 40%;
+        display: inline;
+    }
+    #projects article.template {
+        display: none;
+    }
+    #category-filter {
+      width: 20%;
+      display: inline;
+    }
+    #filters {
+      width: 30%;
+    }
+    div#filters {
+      display: inline-block;
+    }
+}

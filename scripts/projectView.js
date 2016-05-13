@@ -46,6 +46,12 @@ portfolioPage.handleMainNav = function() {
       }
     });
   });
+  $('.top').on('click', '.logo', function() {
+    $('.main-nav .tab:first').click();
+
+  });
+
+
   $('.main-nav .tab:first').click();
 };
 

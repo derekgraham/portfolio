@@ -14,6 +14,32 @@
  	<link rel="stylesheet" href="styles/modules/about.css">
  	<link rel="stylesheet" href="styles/modules/projects.css">
 
+    <script id='project-template' type="text/x-handlebars-template">
+        <article class="template" data-category="{{category}}">
+            <header>
+                <h5>{{name}}</h5>
+                <div class="byline">
+                    By
+                    <address><a href="">{{maker}}</a></address>
+                    created
+                    <time pubdate={{publishedDate}} datetime="2000-01-01">Publish Time</time>
+                </div>
+            </header>
+            <section class="project-body">{{description}}</section>
+            <section class="project-image hidden">
+            <a class='project-image-link' href=""><img class='project-image' src="{{mediaURL}}"></a>
+            </section>
+            <section class="project-video hidden">
+            <video class="project-image" controls>
+            <source src="{{mediaURL}}" type=""> Your browser does not support the video tag.
+            </video>
+            </section>
+            <section class="project-gallery hidden"></section>
+            <p class="project-image-title">{{title}}</p>
+        </article>
+
+
+    </script>
 
 </head>
 
@@ -23,6 +49,7 @@
             <h1>Derek Graham</h1>
             <h2>web developer &#x2022 maker</h2>
         </section>
+
         <nav class="main-nav">
             <ul>
                 <li class="tab" data-content="about">About</li>
@@ -104,6 +131,7 @@
     </main>
     <footer></footer>
     <script type="text/javascript" src='vendor/jquery-2.2.3.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src="scripts/data.js"></script>
     <script type="text/javascript" src='scripts/app.js'></script>
     <script type="text/javascript" src="scripts/projectView.js"></script>

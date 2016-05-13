@@ -15,12 +15,18 @@ timeSinceCreated = function(createdDate){
 
 };
 
+Projects.prototype.toHandleBarHtml = function (){
+  var $source = $('#project-template').html();
+  console.log($source);
+  var filter = Handlebars.compile($source);
+  return filter(this);
+};
+
 Projects.prototype.toHtml = function() {
   var $tempProject = $('article.template').clone();
 
   $tempProject.attr('data-category', this.category);
   $tempProject.find('h5').html(this.name);
-  console.log(this.name);
   $tempProject.find('address a').html(this.maker);
 
 
@@ -73,5 +79,6 @@ myPortfolioData.forEach(function(ele) {
 
 // Append each Project in the project section
 projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
+  // $('#projects').append(a.toHtml());
+  $('#projects').append(a.toHandleBarHtml());
 });

@@ -1,18 +1,25 @@
 // Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
 var portfolioPage = {};
 
-portfolioPage.populateFilter = function() {
-  $('article').each(function() {
-    if (!$(this).hasClass('template')) {
-
-      var val = $(this).attr('data-category');
-      var optionTag = '<option value="' + val + '">' + val + '</option>';
-      if ($('#category-filter option[value="' + val + '"]').length === 0) {
-        $('#category-filter').append(optionTag);
-      }
-    }
-  });
+portfolioPage.populateFilter = function(template_id) {
+  var $source = $(template_id).html();
+  var filter = Handlebars.compile($source);
+  return filter({myProjects: projects});
 };
+
+
+Handlebars.registerHelper('list', function(items, options) {
+  var out = '';
+  for(var i=0, l = items.length; i<l; i++) {
+    // below works if we have <option value" in the template instead of here.
+    // out = out + options.fn(items[i]);
+    if (!out.includes(options.fn(items[i]))){
+      out = out + '<option value="' + options.fn(items[i]) + '">'+ options.fn(items[i]) + '</option value>';
+    }
+  }
+  return out;
+});
+
 
 portfolioPage.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
@@ -28,7 +35,7 @@ portfolioPage.handleCategoryFilter = function() {
     } else {
 
       $('article').show();
-      $('article.template').hide();
+      // $('article.template').hide();
 
     }
   });
@@ -54,6 +61,10 @@ portfolioPage.handleMainNav = function() {
 
   $('.main-nav .tab:first').click();
 };
+
+//TODO: update my code to handle this situation 
+// 1. add longer data to data.js
+// 2. show/hide longer and shorter versions
 
 portfolioPage.setTeasers = function() {
     // Hide any elements after the first 2 (<p> tags in this case)
@@ -81,10 +92,13 @@ portfolioPage.setTeasers = function() {
   });
 };
 
-// TODO:DONE Call all of the above functions, once we are sure the DOM is ready.
 $(document).ready(function() {
-  portfolioPage.populateFilter();
+  $('#category-filter').append(portfolioPage.populateFilter('#category-filter-template'));
+  // portfolioPage.populateFilter();
   portfolioPage.handleCategoryFilter();
   portfolioPage.handleMainNav();
     // portfolioPage.setTeasers();
 });
+
+
+

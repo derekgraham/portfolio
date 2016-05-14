@@ -19,12 +19,12 @@
                     By
                     <address><a href="">{{maker}}</a></address>
                     created
-                    <time pubdate={{publishedDate}} datetime="2000-01-01">Publish Time</time>
+                    <time title="{{publishedDate}}" pubdate="{{publishedDate}}"" datetime="2000-01-01">{{relativePubDate}}</time>
                 </div>
             </header>
             <section class="project-body">{{description}}</section>
             {{#if media.imageURL}}
-            <section class="project-image ">
+            <section class="project-image">
                 <a class='project-image-link' href=""><img class='project-image' src="{{media.imageURL}}"></a>
             </section>
             {{/if}} {{#if media.video}}

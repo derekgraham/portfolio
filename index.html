@@ -8,14 +8,11 @@
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
-<!--     <link rel="stylesheet" href="styles/modules.css">
- -->    
- 	<link rel="stylesheet" href="styles/modules/nav.css">
- 	<link rel="stylesheet" href="styles/modules/about.css">
- 	<link rel="stylesheet" href="styles/modules/projects.css">
-
+    <link rel="stylesheet" href="styles/modules/nav.css">
+    <link rel="stylesheet" href="styles/modules/about.css">
+    <link rel="stylesheet" href="styles/modules/projects.css">
     <script id='project-template' type="text/x-handlebars-template">
-        <article class="template" data-category="{{category}}">
+        <article data-category="{{category}}">
             <header>
                 <h5>{{name}}</h5>
                 <div class="byline">
@@ -26,30 +23,31 @@
                 </div>
             </header>
             <section class="project-body">{{description}}</section>
-            <section class="project-image hidden">
-            <a class='project-image-link' href=""><img class='project-image' src="{{mediaURL}}"></a>
+            {{#if media.imageURL}}
+            <section class="project-image ">
+                <a class='project-image-link' href=""><img class='project-image' src="{{media.imageURL}}"></a>
             </section>
-            <section class="project-video hidden">
-            <video class="project-image" controls>
-            <source src="{{mediaURL}}" type=""> Your browser does not support the video tag.
-            </video>
+            {{/if}} {{#if media.video}}
+            <section class="project-video ">
+                <video class="project-image" controls>
+                    <source src="{{media.video.src}}" type="{{media.video.type}}"> Your browser does not support the video tag.
+                </video>
             </section>
-            <section class="project-gallery hidden"></section>
+            {{/if}}
             <p class="project-image-title">{{title}}</p>
         </article>
-
-
     </script>
-
+    <script id="category-filter-template" type="text/x-handlebars-template">
+        {{#list myProjects}}{{category}}{{/list}}
+    </script>
 </head>
 
 <body>
     <header class="top">
         <section class="logo">
             <h1>Derek Graham</h1>
-            <h2>web developer &#x2022 maker</h2>
+            <h2>web developer &#x2022; maker</h2>
         </section>
-
         <nav class="main-nav">
             <ul>
                 <li class="tab" data-content="about">About</li>
@@ -63,13 +61,12 @@
         <section id="about" class="tab-content">
             <h4>About</h4>
             <div class="about">
-            	<div class="about-image">
-            		
-            	<figure>
-	                <img src="images/derek_2009_067.jpg">
-				 	<figcaption>Fig. 1 - the right tool for the job</figcaption>
-				</figure>
-            	</div>
+                <div class="about-image">
+                    <figure>
+                        <img src="images/derek_2009_067.jpg">
+                        <figcaption>Fig. 1 - the right tool for the job</figcaption>
+                    </figure>
+                </div>
                 <p class="about"></p>
                 <p class="about">Currently learning Web Development at Codefellows.org - Coding 201 and 301.</p>
                 <br>
@@ -79,36 +76,13 @@
         </section>
         <section id="projects" class="tab-content">
             <h4>Projects</h4>
-                <div id="filters">
-						<label for="category-filter">Please choose a category:</label>	
-                        <select name="category-filter" id="category-filter">
-                            <option value="">-- Filter by Categories --</option>
-                        </select>
-                </div>
-            <section id='list'>
-                <article class="template" data-category="cat">
-                    <header>
-                        <h5>Title</h5>
-                        <div class="byline">
-                            By
-                            <address><a href="">Author Name</a></address>
-                            created
-                            <time pubdate datetime="2000-01-01">Publish Time</time>
-                        </div>
-                    </header>
-                    <section class="project-body"></section>
-                    <section class="project-image hidden">
-                        <a class='project-image-link' href=""><img class='project-image' src=""></a>
-                    </section>
-                    <section class="project-video hidden">
-                        <video class="project-image" controls>
-                            <source src="" type=""> Your browser does not support the video tag.
-                        </video>
-                    </section>
-                    <section class="project-gallery hidden"></section>
-                    <p class="project-image-title"></p>
-                </article>
-            </section>
+            <div id="filters">
+                <label for="category-filter">Please choose a category:</label>
+                <select name="category-filter" id="category-filter">
+                    <option value="">-- Filter by Categories --</option>
+                </select>
+            </div>
+            <section id='project-list'></section>
         </section>
         <section id="skills" class="tab-content">
             <h4>Skills</h4>
@@ -129,12 +103,13 @@
             </ul>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+    </footer>
     <script type="text/javascript" src='vendor/jquery-2.2.3.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src="scripts/data.js"></script>
-    <script type="text/javascript" src='scripts/app.js'></script>
     <script type="text/javascript" src="scripts/projectView.js"></script>
+    <script type="text/javascript" src='scripts/portfolio.js'></script>
 </body>
 
 </html>

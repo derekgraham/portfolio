@@ -11,8 +11,6 @@ portfolioPage.populateFilter = function(template_id) {
 Handlebars.registerHelper('list', function(items, options) {
   var out = '';
   for(var i=0, l = items.length; i<l; i++) {
-    // below works if we have <option value" in the template instead of here.
-    // out = out + options.fn(items[i]);
     if (!out.includes(options.fn(items[i]))){
       out = out + '<option value="' + options.fn(items[i]) + '">'+ options.fn(items[i]) + '</option value>';
     }
@@ -35,8 +33,6 @@ portfolioPage.handleCategoryFilter = function() {
     } else {
 
       $('article').show();
-      // $('article.template').hide();
-
     }
   });
 
@@ -62,26 +58,15 @@ portfolioPage.handleMainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
-//TODO: update my code to handle this situation 
-// 1. add longer data to data.js
-// 2. show/hide longer and shorter versions
 
+//fixme: create some longer bogus data and get show more / less working
 portfolioPage.setTeasers = function() {
     // Hide any elements after the first 2 (<p> tags in this case)
     // in any artcile body:
   $('.project-body *:nth-of-type(n+2)').hide();
 
-    // TODO:DONE Add a delegated event handler to reveal the remaining paragraph.
-    //       When a .read-on link is clicked, we can:
-    //        1. Prevent the default action of a link (to navigate away from the page).
-    //        2. Reveal everything in that particular article now.
-    //        3. Hide that read-on link!
-    //       Ideally, we should attach this as just 1 event handler
-    //       on the #articles section, and let it process any .read-on clicks that
-    //       happen.
   $('#projects').on('click', '.read-on', function(event) {
     event.preventDefault();
-    console.log($(this).text());
     if ($(this).text() === 'Show Less') {
       $('.project-body *:nth-of-type(n+2)').hide();
       $(this).html('Read on &rarr;');
@@ -92,13 +77,15 @@ portfolioPage.setTeasers = function() {
   });
 };
 
-$(document).ready(function() {
+portfolioPage.initPage = function (){
+  Project.all.forEach(function(a){
+    a.generateHtml();
+  });
+
   $('#category-filter').append(portfolioPage.populateFilter('#category-filter-template'));
-  // portfolioPage.populateFilter();
   portfolioPage.handleCategoryFilter();
   portfolioPage.handleMainNav();
-    // portfolioPage.setTeasers();
-});
+};
 
 
 

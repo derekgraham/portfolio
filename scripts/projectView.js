@@ -4,17 +4,20 @@ var portfolioPage = {};
 portfolioPage.populateFilter = function(template_id) {
   var $source = $(template_id).html();
   var filter = Handlebars.compile($source);
-  return filter({myProjects: projects});
+  return filter({myProjects: Project.all});
 };
 
 
 Handlebars.registerHelper('list', function(items, options) {
   var out = '';
+
   for(var i=0, l = items.length; i<l; i++) {
     if (!out.includes(options.fn(items[i]))){
+
       out = out + '<option value="' + options.fn(items[i]) + '">'+ options.fn(items[i]) + '</option value>';
     }
   }
+  console.log(out);
   return out;
 });
 

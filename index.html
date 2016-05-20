@@ -4,6 +4,7 @@
 <head>
     <title>Derek Graham</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -13,28 +14,41 @@
     <link rel="stylesheet" href="styles/modules/projects.css">
     <script id='project-template' type="text/x-handlebars-template">
         <article data-category="{{category}}">
-            <header>
-                <h5>{{name}}</h5>
-                <div class="byline">
-                    By
-                    <address><a href="">{{maker}}</a></address>
-                    created
-                    <time title="{{publishedDate}}" pubdate="{{publishedDate}}"" datetime="2000-01-01">{{relativePubDate}}</time>
-                </div>
-            </header>
-            <section class="project-body">{{description}}</section>
-            {{#if media.imageURL}}
-            <section class="project-image">
-                <a class='project-image-link' href=""><img class='project-image' src="{{media.imageURL}}"></a>
-            </section>
-            {{/if}} {{#if media.video}}
-            <section class="project-video ">
-                <video class="project-image" controls>
-                    <source src="{{media.video.src}}" type="{{media.video.type}}"> Your browser does not support the video tag.
-                </video>
-            </section>
-            {{/if}}
-            <p class="project-image-title">{{title}}</p>
+            <div class="box">
+              <div class="boxInner">
+                <header>
+                    <h5>{{name}}</h5>
+                    <div class="byline">
+                        By
+                        <address><a href="">{{maker}}</a></address>
+                        created
+                        <time title="{{publishedDate}}" pubdate="{{publishedDate}}"" datetime="2000-01-01">{{relativePubDate}}</time>
+                    </div>
+                </header>
+                {{#if media.imageURL}}
+                    <div class="box-inside">
+                        <div class="boxInner-inside">
+                        
+                            <img  src="{{media.imageURL}}" />
+                                <div class="titleBox">{{title}}</div>
+                            </div>
+                    </div>
+
+
+                {{else if media.video}}
+                    <div class="box-inside">
+                    <div class="boxInner-inside">
+                        <video  controls>
+                            <source src="{{media.video.src}}" type="{{media.video.type}}"> Your browser does not support the video tag.
+                        </video>
+                     <div class="titleBox">{{title}}</div>
+                    {{/if}}
+                    </div>
+                    </div>
+
+                    </div>
+            </div>
+
         </article>
     </script>
     <script id="category-filter-template" type="text/x-handlebars-template">
@@ -42,7 +56,7 @@
     </script>
 </head>
 
-<body>
+<body class="no-touch">
     <header class="top">
         <section class="logo">
             <h1>Derek Graham</h1>
@@ -73,6 +87,29 @@
                 <p>Follow me on twitter.</p>
                 <p>check out my projects on github</p>
             </div>
+            <div class="gallery-container">
+                <div class=" wrapper main-box">
+                <div class="content">
+                    
+                    <div class=" wrapper half">
+                        <div class="sixteen-by-nine aspect-ratio"></div>
+                        <div class="content "><img style="height:200%; clip: 100%;border-radius:50%; object-fit:cover;" src="images/coop/coop subfloor.jpg"></div>
+                    </div>
+                    <div class="wrapper half">
+                        <div class="sixteen-by-nine aspect-ratio"></div>
+                        <div class="content "><img style="border-radius:50%; object-fit:cover;" src="images/coop/Coop Layout_09.jpg"></div>
+                    </div>
+                    <div class="wrapper half">
+                        <div class="sixteen-by-nine aspect-ratio"></div>
+                        <div class="content crop"><img style="border-radius:50%; object-fit:cover;" src="images/coop/Coop Framing.jpg"></div>
+                    </div>
+                </div>
+                <div class="gallery-main"></div>
+
+                </div>
+                </div>
+
+
         </section>
         <section id="projects" class="tab-content">
             <h4>Projects</h4>
@@ -110,6 +147,7 @@
     <script type="text/javascript" src="scripts/data.js"></script>
     <script type="text/javascript" src='scripts/portfolio.js'></script>
     <script type="text/javascript" src="scripts/projectView.js"></script>
+    <script type="text/javascript" src='scripts.data.js'></script>
     <script> window.Project.checkForNewRemoteData(); </script>
 
 </body>

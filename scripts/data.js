@@ -12,7 +12,7 @@ var myPortfolioData = [
     category: 'analog',
     publishedDate: '2011-01-01',
     media: { imageURL: 'images/fishing.jpg'},
-    title: '',
+    title: 'Gone Fishing',
     description: '',
     projectURL: '',
     technologies: ''
@@ -22,7 +22,7 @@ var myPortfolioData = [
     category: 'analog',
     publishedDate: '2010-01-01',
     media: {imageURL: 'images/fireplace.jpg'},
-    title: '',
+    title: 'Steel Fireplace Surround',
     description: '',
     projectURL: '',
     technologies: ''
@@ -42,7 +42,7 @@ var myPortfolioData = [
     category: 'analog',
     publishedDate: '2012-01-01',
     media: {imageURL: 'images/studio.jpg'},
-    title: '',
+    title: 'Interbay Studio Collective',
     description: 'Unique property in the Interbay Industrial area neighborhood with a caretakers\' apartment and 5 workspaces',
     projectURL: 'http://www.interbaystudiocollective.com',
     technologies: 'Aluminum stairs, metal siding & roofing, hydronic radiant heat, upcycled vintage school doors, tenant kitchenette'
@@ -50,9 +50,11 @@ var myPortfolioData = [
     name: 'Coop 401',
     maker: 'Derek Graham',
     category: 'analog',
+    key: 'coop',
     publishedDate: '2015-08-01',
     media: {imageURL: 'images/coop.jpg'},
-    title: 'Coop 401 - home to 20 busy hens',
+    gallery: {imageURLArray: ['Coop Framing.jpg', 'coop subfloor.jpg', 'Coop Layout_09.jpg', ]},
+    title: 'Coop 401',
     description: 'Upgraded chicken coop for 20 hens',
     projectURL: '',
     technologies: 'Metal siding, standing seam roof, sweep-out'

@@ -55,10 +55,11 @@ nav li {
     font-variant: small-caps;
     font-weight: bold;
 }
-    .tab-content h4 {
-        border-bottom: 1px solid black;
-        margin-bottom: 1em;
-    }
+
+.tab-content h4 {
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+}
 
 @media only screen and (max-width: 365px) {
   nav li {

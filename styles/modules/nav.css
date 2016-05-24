@@ -11,16 +11,18 @@
 
 h1 {
     padding: 0;
+    padding-top: .5em;
     margin: 0px auto;
     text-align: center;
     color: white;
+    font-size: 2em;
 }
 
 h2 {
-    font-size: .8em;
+    font-size: 1.5em;
     text-align: center;
     display: block;
-    padding: .1em;
+    padding-top: .2em;
     margin: 0px auto;
     color: white;
 }
@@ -50,7 +52,8 @@ nav li {
     border: 1px solid black;
     padding: .2em;
     margin: .2em;
-    min-width: 20%;
+    min-width: 15%;
+    max-width: 20%;
     text-transform: lowercase;
     font-variant: small-caps;
     font-weight: bold;
@@ -66,7 +69,7 @@ nav li > a, a:visited, a:link{
     margin-bottom: 1em;
 }
 
-@media only screen and (max-width: 365px) {
+@media only screen and (max-width: 380px) {
   nav li {
     display: inline-block;
     font-size: 1.2em;
@@ -85,7 +88,7 @@ nav li > a, a:visited, a:link{
   }
 }
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 930px) {
     .top {
         margin: 0 auto;
         width: 100%;
@@ -96,29 +99,33 @@ nav li > a, a:visited, a:link{
         display: table;
     }
     .logo {
-        margin-left: 5%;
+        margin-left: 2%;
         width: 30%;
         text-align: left;
         display: inline-block;
     }
     nav {
-        width: 60%;
+        width: 65%;
         clear: both;
         float: right;
         border-right: 0;
     }
     h1 {
         text-align: left;
+        font-size: 2em;
     }
     h2 {
         text-align: left;
+        padding-top: .3em;
+        font-size: 1.5em;
+
     }
     nav li {
         display: inline-block;
         text-align: center;
         line-height: 1.4em;
         margin-right: .4em;
-        font-size: 1.2em;
+        font-size: 2em;
         border: 1px solid black;
         padding: .1em;
         margin: .1em;
@@ -133,7 +140,7 @@ nav li > a, a:visited, a:link{
         list-style: none;
         text-align: right;
     }
-
+@media only screen and (min-width: 780px)
 
 
 }

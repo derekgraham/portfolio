@@ -16,6 +16,22 @@ div.about figure {
   text-align: center;
 }
 
+ul.experience li {
+    text-align: left;
+    margin-left: 5%;
+}
+
+ul.skills li {
+    text-align: left;
+    margin-left: 5%;
+}
+
+ul.repos li {
+    text-align: left;
+}
+.github-data {
+    margin-left: 5%;
+}
 @media only screen and (min-width: 780px) {
     .about img {
         max-height: 350px;

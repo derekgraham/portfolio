@@ -1,0 +1,139 @@
+.top {
+  background-color: #FE7214;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    padding: 0;
+    margin: 0px auto;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    font-size: .8em;
+    text-align: center;
+    display: block;
+    padding: .1em;
+    margin: 0px auto;
+    color: white;
+}
+
+h4,
+h5 {
+    margin-bottom: .1em;
+    margin-left: 5%;
+}
+
+h5 {
+    font-size: 1.2em;
+    border-bottom: 1px solid dark-gray;
+    max-width: 90%;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: .4em;
+    font-size: 1.5em;
+    border: 1px solid black;
+    padding: .2em;
+    margin: .2em;
+    min-width: 20%;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+nav li > a, a:visited, a:link{
+    color: black;
+}
+
+
+.tab-content h4 {
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 365px) {
+  nav li {
+    display: inline-block;
+    font-size: 1.2em;
+    border: 1px solid black;
+    padding: .2em;
+    margin: .2em;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-weight: bold;
+  }
+  p {
+    font-size: .8em;
+  }
+  figcaption  {
+    font-size: .7em;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+    .top {
+        margin: 0 auto;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        border-bottom: 1px solid black;
+        clear: both;
+        display: table;
+    }
+    .logo {
+        margin-left: 5%;
+        width: 30%;
+        text-align: left;
+        display: inline-block;
+    }
+    nav {
+        width: 60%;
+        clear: both;
+        float: right;
+        border-right: 0;
+    }
+    h1 {
+        text-align: left;
+    }
+    h2 {
+        text-align: left;
+    }
+    nav li {
+        display: inline-block;
+        text-align: center;
+        line-height: 1.4em;
+        margin-right: .4em;
+        font-size: 1.2em;
+        border: 1px solid black;
+        padding: .1em;
+        margin: .1em;
+        width: 5em;
+        text-transform: lowercase;
+        font-variant: small-caps;
+        font-weight: bold;
+        border-radius: .1em;
+    }
+    ul {
+        padding-right: 5%;
+        list-style: none;
+        text-align: right;
+    }
+
+
+
+}

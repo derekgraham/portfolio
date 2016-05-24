@@ -1,0 +1,35 @@
+
+.about {
+    margin-left: 5%;
+    max-width: 90%;
+}
+
+.about.tagline {
+    text-align: center;
+}
+
+.about img {
+  max-height: 350px;
+}
+
+div.about figure {
+  text-align: center;
+}
+
+@media only screen and (min-width: 780px) {
+    .about img {
+        max-height: 350px;
+    }
+    .about-image {
+        float: left;
+        max-width: 375px;
+        margin-top: 0;
+    }
+    .tab-content h4 {
+        border-bottom: 1px solid black;
+        margin-bottom: 1em;
+    }
+    p.about {
+      margin: 0;
+    }
+}

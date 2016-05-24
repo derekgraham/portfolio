@@ -1,67 +1,140 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Derek Graham</title>
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Derek Graham</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/modules/nav.css">
+    <link rel="stylesheet" href="styles/modules/about.css">
+    <link rel="stylesheet" href="styles/modules/projects.css">
+    <script id='project-template' type="text/x-handlebars-template">
+        <article data-category="{{category}}">
+            <div class="box">
+              <div class="boxInner">
+                <header>
+                    <h5>{{name}}</h5>
+                    <div class="byline">
+                        By
+                        <address><a href="">{{maker}}</a></address>
+                        created
+                        <time title="{{publishedDate}}" pubdate="{{publishedDate}}"" datetime="2000-01-01">{{relativePubDate}}</time>
+                    </div>
+                </header>
+                {{#if media.imageURL}}
+                    <div class="box-inside">
+                        <div class="boxInner-inside">
+                        
+                            <img  src="{{media.imageURL}}" />
+                                <div class="titleBox">{{title}}</div>
+                            </div>
+                    </div>
+
+
+                {{else if media.video}}
+                    <div class="box-inside">
+                    <div class="boxInner-inside">
+                        <video  controls>
+                            <source src="{{media.video.src}}" type="{{media.video.type}}"> Your browser does not support the video tag.
+                        </video>
+                     <div class="titleBox">{{title}}</div>
+                    {{/if}}
+                    </div>
+                    </div>
+
+                    </div>
+            </div>
+
+        </article>
+    </script>
+    <script id="category-filter-template" type="text/x-handlebars-template">
+        {{#list myProjects}}{{category}}{{/list}}
+    </script>
 </head>
-<body>
-    <header class="">
-      <section class="">
 
-        <h1>Derek Graham</h1>
-        <h2>web developer &#x2022 maker</h2>
-      </section>
-      <hr>
-      <nav class="main-nav">
-        <ul>
-        	<li>About</li>
-<!--         	<li>Analog</li>
- -->        <li>Projects</li>
-        	<li>Skills</li>
-        	<li>Experience</li>
-        </ul>
-      </nav>
+<body class="no-touch">
+    <header class="top">
+        <section class="logo">
+            <h1>Derek Graham</h1>
+            <h2>web developer &#x2022; maker</h2>
+        </section>
+        <nav class="main-nav">
+            <ul>
+                <li class="tab" data-content="about"><a href="/about">About</a></li>
+                <li class="tab" data-content="projects"><a href="/">Projects</a></li>
+                <li class="tab" data-content="skills"><a href="/skills">Skills</a></li>
+                <li class="tab" data-content="experience"><a href="/experience">Experience</a></li>
+            </ul>
+        </nav>
     </header>
-    <section>
-    	<h4>About</h4>
-    	<hr>
-    	<div class="about">
-    	<img src="images/derek_2009_067.jpg">
-    		
-    	<p class="about tagline">I have been a maker my whole life.</p>
-    	<p class="about">I am  seeking new nails for my hammer as I chase ideas from the physical world to the virtual.</p>
-    	<p class="about">Currently learning Web Development at Codefellows.org - Coding 201 and 301.</p>
-    	<br>
-    	<p>Follow me on twitter.</p>
-    	<p>check out my projects on github</p>
-    	</div>
-    </section>
-    <section><h4>Projects</h4><hr>
+    <main>
+        <section id="about" class="tab-content" style="display: none;">
+            <h4>About</h4>
+            <div class="about">
+                <div class="about-image">
+                    <figure>
+                        <img src="images/derek_2009_067.jpg">
+                        <figcaption>Fig. 1 - the right tool for the job</figcaption>
+                    </figure>
+                </div>
+                <p class="about"></p>
+                <p class="about">Currently learning Web Development at Codefellows.org - Coding 201 and 301.</p>
+                <br>
+                <p>Follow me on twitter.</p>
+                <p>check out my projects on github</p>
+            </div>
 
 
-    </section>
-    <section><h4>Skills</h4><hr>
-    	<ul class="skills">
-    		<li>HTML5</li>
-    		<li>CSS3</li>
-    		<li>ECMAScript</li>
-    		<li>jQuery</li>
-    		<li>Firebase</li>
-    		<li>Chart.js</li>
-    	</ul>
+
+        </section>
+        <section id="projects" class="tab-content" style="display: none;">
+            <h4>Projects</h4>
+            <div id="filters">
+                <label for="category-filter">Please choose a category:</label>
+                <select name="category-filter" id="category-filter">
+                    <option value="">-- Filter by Categories --</option>
+                </select>
+            </div>
+            <section id='project-list'></section>
+        </section>
+        <section id="skills" class="tab-content" style="display: none;">
+            <h4>Skills</h4>
+            <ul class="skills">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>ECMAScript</li>
+                <li>jQuery</li>
+                <li>Firebase</li>
+                <li>Chart.js</li>
+            </ul>
+        </section>
+        <section id="experience" class="tab-content" style="display: none;">
+            <h4>Experience</h4>
+            <ul class="experience">
+                <li>Codefellows 201</li>
+                <li>Codefellows 301</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script type="text/javascript" src='vendor/jquery-2.2.3.js'></script>
+    <script type="text/javascript" src='vendor/scripts/page.js'></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+
+    <script type="text/javascript" src='scripts/models/portfolio.js'></script>
+    <script type="text/javascript" src="scripts/views/projectView.js"></script>
+
+    <script type="text/javascript" src="scripts/controllers/pageControllers.js"></script>
+    <script type="text/javascript" src='scripts/controllers/routes.js'></script>
+    
 
 
-    </section>
-    <section><h4>Experience</h4><hr>
-    	<ul class="experience">
-    		<li>Codefellows 201</li>
-    		<li>Codefellows 301</li>
-    	</ul>
-    </section>
 </body>
+
 </html>

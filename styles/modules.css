@@ -1,3 +1,7 @@
+nav li > a{
+    color: black;
+}
+
 .top {
   background-color: #FE7214;
 }
@@ -93,7 +97,7 @@ ul {
 nav li {
     display: inline-block;
     margin-right: .4em;
-    font-size: .8em;
+    font-size: 1.5em;
     border: 1px solid black;
     padding: .2em;
     margin: .2em;
@@ -121,7 +125,7 @@ nav li {
 @media only screen and (max-width: 365px) {
   nav li {
     display: inline-block;
-    font-size: .7em;
+    font-size: 1.5em;
     border: 1px solid black;
     padding: .2em;
     margin: .2em;

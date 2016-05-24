@@ -64,15 +64,15 @@
         </section>
         <nav class="main-nav">
             <ul>
-                <li class="tab" data-content="about">About</li>
-                <li class="tab" data-content="projects">Projects</li>
-                <li class="tab" data-content="skills">Skills</li>
-                <li class="tab" data-content="experience">Experience</li>
+                <li class="tab" data-content="about"><a href="/about">About</a></li>
+                <li class="tab" data-content="projects"><a href="/">Projects</a></li>
+                <li class="tab" data-content="skills"><a href="/skills">Skills</a></li>
+                <li class="tab" data-content="experience"><a href="/experience">Experience</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="about" class="tab-content">
+        <section id="about" class="tab-content" style="display: none;">
             <h4>About</h4>
             <div class="about">
                 <div class="about-image">
@@ -91,7 +91,7 @@
 
 
         </section>
-        <section id="projects" class="tab-content">
+        <section id="projects" class="tab-content" style="display: none;">
             <h4>Projects</h4>
             <div id="filters">
                 <label for="category-filter">Please choose a category:</label>
@@ -101,7 +101,7 @@
             </div>
             <section id='project-list'></section>
         </section>
-        <section id="skills" class="tab-content">
+        <section id="skills" class="tab-content" style="display: none;">
             <h4>Skills</h4>
             <ul class="skills">
                 <li>HTML5</li>
@@ -112,7 +112,7 @@
                 <li>Chart.js</li>
             </ul>
         </section>
-        <section id="experience" class="tab-content">
+        <section id="experience" class="tab-content" style="display: none;">
             <h4>Experience</h4>
             <ul class="experience">
                 <li>Codefellows 201</li>
@@ -127,11 +127,13 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 
-    <script type="text/javascript" src="scripts/data.js"></script>
-    <script type="text/javascript" src='scripts/portfolio.js'></script>
-    <script type="text/javascript" src="scripts/projectView.js"></script>
+    <script type="text/javascript" src='scripts/models/portfolio.js'></script>
+    <script type="text/javascript" src="scripts/views/projectView.js"></script>
+
+    <script type="text/javascript" src="scripts/controllers/pageControllers.js"></script>
+    <script type="text/javascript" src='scripts/controllers/routes.js'></script>
     
-    <script> window.Project.checkForNewRemoteData(); </script>
+
 
 </body>
 

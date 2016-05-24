@@ -39,26 +39,6 @@
 
   };
 
-  portfolioPage.handleMainNav = function() {
-    $('.main-nav').on('click', '.tab', function() {
-      var val = $(this).attr('data-content');
-      console.log(val);
-      $('.tab-content').hide();
-      $('.tab-content').each(function(index) {
-        if ($(this).attr('id') === val) {
-          $(this).fadeIn(2000);
-        }
-      });
-    });
-    $('.top').on('click', '.logo', function() {
-      $('.main-nav .tab:first').click();
-
-    });
-
-
-    $('.main-nav .tab:first').click();
-  };
-
 
   //fixme: create some longer bogus data and get show more / less working
   portfolioPage.setTeasers = function() {
@@ -85,7 +65,6 @@
 
     $('#category-filter').append(portfolioPage.populateFilter('#category-filter-template'));
     portfolioPage.handleCategoryFilter();
-    portfolioPage.handleMainNav();
   };
   module.portfolioPage = portfolioPage;
 })(window);

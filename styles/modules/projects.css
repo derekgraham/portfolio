@@ -21,7 +21,7 @@ body {
 
 .byline {
     margin-left: 5%;
-    font-size: .6em;
+    font-size: 1em;
     margin-bottom: 1em;
 }
 
@@ -191,25 +191,6 @@ body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleB
       padding-bottom: 40%;
    }
 
-}
-@media only screen and (max-width: 365px) {
-  nav li {
-    display: inline-block;
-    font-size: .7em;
-    border: 1px solid black;
-    padding: .2em;
-    margin: .2em;
-    text-transform: lowercase;
-    font-variant: small-caps;
-    font-weight: bold;
-  }
-  p {
-    font-size: .8em;
-  }
-  figcaption  {
-    font-size: .7em;
-  }
-}
 
 @media only screen and (min-width: 780px) {
     #projects article {
@@ -246,40 +227,9 @@ body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleB
     h2 {
         text-align: left;
     }
-    nav li {
-        display: inline-block;
-        text-align: center;
-        line-height: 1.5em;
-        margin-right: .4em;
-        font-size: 1.2em;
-        border: 1px solid black;
-        padding: .1em;
-        margin: .1em;
-        width: 5em;
-        text-transform: lowercase;
-        font-variant: small-caps;
-        font-weight: bold;
-        border-radius: .1em;
-    }
-    ul {
-        padding-right: 5%;
-        list-style: none;
-        text-align: right;
-    }
-    .about img {
-        max-height: 350px;
-    }
-    .about-image {
-        float: left;
-        max-width: 375px;
-        margin-top: 0;
-    }
     .tab-content h4 {
         border-bottom: 1px solid black;
         margin-bottom: 1em;
-    }
-    p.about {
-      margin: 0;
     }
     #category-filter {
       width: 20%;

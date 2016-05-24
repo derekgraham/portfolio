@@ -46,7 +46,7 @@ ul {
 nav li {
     display: inline-block;
     margin-right: .4em;
-    font-size: .8em;
+    font-size: 1.5em;
     border: 1px solid black;
     padding: .2em;
     margin: .2em;
@@ -56,6 +56,11 @@ nav li {
     font-weight: bold;
 }
 
+nav li > a, a:visited, a:link{
+    color: black;
+}
+
+
 .tab-content h4 {
     border-bottom: 1px solid black;
     margin-bottom: 1em;
@@ -64,7 +69,7 @@ nav li {
 @media only screen and (max-width: 365px) {
   nav li {
     display: inline-block;
-    font-size: .7em;
+    font-size: 1.2em;
     border: 1px solid black;
     padding: .2em;
     margin: .2em;
@@ -111,7 +116,7 @@ nav li {
     nav li {
         display: inline-block;
         text-align: center;
-        line-height: 1.5em;
+        line-height: 1.4em;
         margin-right: .4em;
         font-size: 1.2em;
         border: 1px solid black;

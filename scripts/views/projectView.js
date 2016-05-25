@@ -19,6 +19,8 @@
     return out;
   });
 
+  
+
 
   portfolioPage.handleCategoryFilter = function() {
     $('#category-filter').on('change', function() {

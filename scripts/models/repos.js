@@ -1,6 +1,5 @@
 (function(module) {
   var repos = {};
-  var followers = {};
 
   repos.all = [];
   // followers.all = [];

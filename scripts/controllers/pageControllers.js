@@ -28,6 +28,7 @@
   experienceController.index = function() {
     $('.tab-content').hide();
     $('#experience').fadeIn(2000);
+    experiences.getData(experienceView.index);
 
   };
 

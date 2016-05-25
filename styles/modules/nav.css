@@ -16,13 +16,14 @@ h1 {
     text-align: center;
     color: white;
     font-size: 2em;
+    padding-bottom: .2em;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     text-align: center;
     display: block;
-    padding-top: .2em;
+    padding-top: .3em;
     margin: 0px auto;
     color: white;
 }
@@ -112,12 +113,14 @@ nav li > a, a:visited, a:link{
     }
     h1 {
         text-align: left;
-        font-size: 2em;
+        font-size: 3em;
+        padding-bottom: .3em;
     }
     h2 {
         text-align: left;
         padding-top: .3em;
-        font-size: 1.5em;
+        font-size: 1.6em;
+        padding-bottom: .5em;
 
     }
     nav li {
@@ -134,6 +137,8 @@ nav li > a, a:visited, a:link{
         font-variant: small-caps;
         font-weight: bold;
         border-radius: .1em;
+        padding-bottom: .2em;
+
     }
     ul {
         padding-right: 5%;

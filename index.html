@@ -67,6 +67,13 @@
         </li>
 
     </script>
+        <script id="experience-template" type="text/x-handlebars-template">
+        <li>
+            <p>{{title}}</p>
+            {{#list myProjects}}{{category}}{{/list}}
+        </li>
+
+    </script>
 </head>
 
 <body class="no-touch">
@@ -137,7 +144,7 @@
         </section>
         <section id="experience" class="tab-content" style="display: none;">
             <h4>Experience</h4>
-            <ul class="experience">
+            <ul class="experience"><strong>Microsoft, </strong>Seattle, WA
                 <li>Codefellows 201</li>
                 <li>Codefellows 301</li>
             </ul>
@@ -150,12 +157,16 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src = 'githubtoken.js'></script>
+    <script type="text/javascript" src="data/experienceData.js"></script>
 
     <script type="text/javascript" src='scripts/models/portfolio.js'></script>
     <script type="text/javascript" src='scripts/models/repos.js'></script>
+    <script type="text/javascript" src='scripts/models/experience.js'></script>
+
 
     <script type="text/javascript" src="scripts/views/projectView.js"></script>
     <script type="text/javascript" src="scripts/views/repoView.js"></script>
+    <script type="text/javascript" src="scripts/views/experienceView.js"></script>
 
 
     <script type="text/javascript" src="scripts/controllers/pageControllers.js"></script>

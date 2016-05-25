@@ -8,7 +8,7 @@
   repos.requestRepos = function(callback) {
     /* DONE: How would you like to fetch your repos? Someone say AJAX!?
        Don't forget to call the callback! */
-    $.get('/github/users/codefellows-seattle-301d4/repos' +
+    $.get('/github/users/derekgraham/repos' +
        '?per_page=15' +
        '&sort=updated')
        .done(function(data) {

@@ -3,14 +3,13 @@
   var projectsController = {};
   var skillsController = {};
   var experienceController = {};
+  var reposController = {};
 
   window.Project.checkForNewRemoteData();
-
 
   aboutController.index = function() {
     $('.tab-content').hide();
     $('#about').fadeIn(2000);
-
 
   };  
 
@@ -32,10 +31,19 @@
 
   };
 
+  reposController.index = function() {
+    // $('.tab-content').hide();
+    // $('#repos').fadeIn(2000);
+    $('#repos').fadeIn(2000).siblings().hide();
+    repos.requestRepos(repoView.index);
+
+  };
+
   module.aboutController = aboutController;
   module.projectsController = projectsController;
   module.skillsController = skillsController;
   module.experienceController = experienceController;
+  module.reposController = reposController;
 
 })(window);
 

@@ -54,20 +54,35 @@
     <script id="category-filter-template" type="text/x-handlebars-template">
         {{#list myProjects}}{{category}}{{/list}}
     </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+        <li>
+            <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+            <p>Description: {{description}}</p>
+            <p>Language: {{language}}</p>
+            <p>Created: {{created_at}}</p>
+            <p>Last updated: {{updated_at}}</p>
+            {{#if watchers_count}}
+              <p>{{watchers}} watching this repo</p>
+            {{/if}}
+        </li>
+
+    </script>
 </head>
 
 <body class="no-touch">
     <header class="top">
         <section class="logo">
             <h1>Derek Graham</h1>
-            <h2>web developer &#x2022; maker</h2>
+            <h2>UX + CODE</h2>
         </section>
         <nav class="main-nav">
             <ul>
                 <li class="tab" data-content="about"><a href="/about">About</a></li>
                 <li class="tab" data-content="projects"><a href="/">Projects</a></li>
+                <li class="tab" data-content="repos"><a href="/repos">Github</a></li>
                 <li class="tab" data-content="skills"><a href="/skills">Skills</a></li>
                 <li class="tab" data-content="experience"><a href="/experience">Experience</a></li>
+
             </ul>
         </nav>
     </header>
@@ -87,10 +102,18 @@
                 <p>Follow me on twitter.</p>
                 <p>check out my projects on github</p>
             </div>
+        </section>
+        <section id="repos" class="tab-content" style="display: none;">
+            <h4>Github Repositories</h4>
 
-
+            <section class="github-data">
+              <ul class="repos">
+                <li>Coding Projects Go Here</li>
+              </ul>
+            </section>
 
         </section>
+
         <section id="projects" class="tab-content" style="display: none;">
             <h4>Projects</h4>
             <div id="filters">
@@ -126,14 +149,17 @@
     <script type="text/javascript" src='vendor/scripts/page.js'></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script type="text/javascript" src = 'githubtoken.js'></script>
 
     <script type="text/javascript" src='scripts/models/portfolio.js'></script>
+    <script type="text/javascript" src='scripts/models/repos.js'></script>
+
     <script type="text/javascript" src="scripts/views/projectView.js"></script>
+    <script type="text/javascript" src="scripts/views/repoView.js"></script>
+
 
     <script type="text/javascript" src="scripts/controllers/pageControllers.js"></script>
     <script type="text/javascript" src='scripts/controllers/routes.js'></script>
-    
-
 
 </body>
 

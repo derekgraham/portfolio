@@ -1,25 +1,6 @@
-page('/', projects);
-page('/about', about);
-page('/skills', skills);
-page('/experience', experience);
+page('/', projectsController.index);
+page('/about', aboutController.index);
+page('/skills', skillsController.index);
+page('/experience', experienceController.index);
+page('/repos', reposController.index);
 page();
-
-function projects() {
-  console.log('Projects Route');
-  projectsController.index();
-}
-
-function about() {
-  console.log('About route');
-  aboutController.index();
-
-}
-
-function skills() {
-  skillsController.index();
-
-}
-
-function experience() {
-  experienceController.index();
-}

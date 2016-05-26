@@ -2,9 +2,9 @@
   var repoView = {};
 
   var ui = function() {
-    var $repos = $('#repos'); 
+    var $repos = $('#repos');
     $repos.find('ul').empty();
-    $repos.show().siblings().hide();
+    // $repos.show().siblings().hide();
   };
 
   var render = Handlebars.compile($('#repo-template').html());

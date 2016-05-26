@@ -1,15 +1,15 @@
 (function(module) {
-  var experiences = {};
+  var experience = {};
 
-  experiences.all = [];
+  experience.all = [];
 
-  experiences.getData = function(callback) {
-    experiences.all = experienceData;
+  experience.getData = function(callback) {
+    experience.all = experienceData;
     callback();
   };
 
 
 
-  module.experiences = experiences;
+  module.experience = experience;
   // module.followers = followers;
 })(window);

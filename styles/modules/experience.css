@@ -1,0 +1,52 @@
+#experience.tab-content h4 {
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 1em;
+}
+p.experience-title li {
+  text-align: right;
+  margin: 0 auto;
+  margin-left: 2%;
+  font-size: 1em;
+}
+
+p.experience-title {
+  text-align: right;
+}
+.left-title {
+  float: left;
+
+}
+.experience-detail {
+  margin-left: 3%;
+  font-size: 1.2em;
+  line-height: normal;
+  padding: 0;
+  margin: 0 auto;
+  list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+@media only screen and (min-width: 1024px) {
+  #experience.tab-content h4 {
+    max-width: 70%;
+
+  }
+ul.experience {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  p.experience-title {
+    font-size: 2em;
+  }
+  .experience-detail {
+    font-size: 1.7em;
+    margin: 0 auto;
+    margin-left: 2%;
+    margin-bottom: .3em;
+  }
+
+}

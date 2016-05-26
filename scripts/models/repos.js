@@ -7,16 +7,12 @@
   repos.requestRepos = function(callback) {
     /* DONE: How would you like to fetch your repos? Someone say AJAX!?
        Don't forget to call the callback! */
-    $.ajax({
-      url: 'https://api.github.com/users/derekgraham/repos' +
-            '?sort=updated',
-      type: 'GET',
-      headers: {'Authorization': 'token ' + gitHubToken},
-      success: function(data) {
-        repos.all = data;
-        callback();
-      }
-    });
+    $.get('/github/users/derekgraham/repos' +
+          '?per_page=15' +
+          '&sort=updated')
+          .done(function(data) {
+            repos.all = data;
+          }).done(callback);
   };
 
   repos.with = function(attr) {
@@ -25,7 +21,7 @@
         repos that have a non-zero `forks_count`, `stargazers_count`,
         or `watchers_count`. */
     return repos.all.filter(function(repo) {
-      return repo[attr]; 
+      return repo[attr];
     });
   };
 

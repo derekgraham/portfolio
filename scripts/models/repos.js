@@ -1,6 +1,5 @@
 (function(module) {
   var repos = {};
-  var followers = {};
 
   repos.all = [];
   // followers.all = [];
@@ -9,7 +8,7 @@
     /* DONE: How would you like to fetch your repos? Someone say AJAX!?
        Don't forget to call the callback! */
     $.get('/github/users/derekgraham/repos' +
-       '?per_page=15' +
+       '?sort=updated' +
        '&sort=updated')
        .done(function(data) {
          repos.all = data;

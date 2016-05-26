@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/modules/nav.css">
     <link rel="stylesheet" href="styles/modules/about.css">
     <link rel="stylesheet" href="styles/modules/projects.css">
+    <link rel="stylesheet" href="styles/modules/experience.css">
     <script id='project-template' type="text/x-handlebars-template">
         <article data-category="{{category}}">
             <div class="box">
@@ -52,7 +53,7 @@
         </article>
     </script>
     <script id="category-filter-template" type="text/x-handlebars-template">
-        {{#list myProjects}}{{category}}{{/list}}
+        {{#cat_list myProjects}}{{category}}{{/cat_list}}
     </script>
     <script id="repo-template" type="text/x-handlebars-template">
         <li>
@@ -67,6 +68,17 @@
         </li>
 
     </script>
+        <script id="experience-template" type="text/x-handlebars-template">
+        <li>
+            <p class="experience-title"><span class="left-title">{{title}} for {{group}}</span> {{start_date}} – {{end_date}}</p>
+        </li>
+        <ul>
+        {{#each details}}
+            <li><p class="experience-detail">{{ this }}</p></li>
+        {{/each}}
+        </ul
+      </script>
+
 </head>
 
 <body class="no-touch">
@@ -87,7 +99,7 @@
         </nav>
     </header>
     <main>
-        <section id="about" class="tab-content" style="display: none;">
+        <section id="about" class="tab-content">
             <h4>About</h4>
             <div class="about">
                 <div class="about-image">
@@ -103,7 +115,7 @@
                 <p>check out my projects on github</p>
             </div>
         </section>
-        <section id="repos" class="tab-content" style="display: none;">
+        <section id="repos" class="tab-content">
             <h4>Github Repositories</h4>
 
             <section class="github-data">
@@ -114,7 +126,7 @@
 
         </section>
 
-        <section id="projects" class="tab-content" style="display: none;">
+        <section id="projects" class="tab-content">
             <h4>Projects</h4>
             <div id="filters">
                 <label for="category-filter">Please choose a category:</label>
@@ -124,7 +136,7 @@
             </div>
             <section id='project-list'></section>
         </section>
-        <section id="skills" class="tab-content" style="display: none;">
+        <section id="skills" class="tab-content">
             <h4>Skills</h4>
             <ul class="skills">
                 <li>HTML5</li>
@@ -135,9 +147,9 @@
                 <li>Chart.js</li>
             </ul>
         </section>
-        <section id="experience" class="tab-content" style="display: none;">
+        <section id="experience" class="tab-content">
             <h4>Experience</h4>
-            <ul class="experience">
+            <ul class="experience"><strong>Microsoft, </strong>Seattle, WA
                 <li>Codefellows 201</li>
                 <li>Codefellows 301</li>
             </ul>
@@ -149,11 +161,16 @@
     <script type="text/javascript" src='vendor/scripts/page.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 
+    <script type="text/javascript" src="data/experienceData.js"></script>
+
     <script type="text/javascript" src='scripts/models/portfolio.js'></script>
     <script type="text/javascript" src='scripts/models/repos.js'></script>
+    <script type="text/javascript" src='scripts/models/experience.js'></script>
+
 
     <script type="text/javascript" src="scripts/views/projectView.js"></script>
     <script type="text/javascript" src="scripts/views/repoView.js"></script>
+    <script type="text/javascript" src="scripts/views/experienceView.js"></script>
 
     <script type="text/javascript" src="scripts/controllers/pageControllers.js"></script>
     <script type="text/javascript" src='scripts/controllers/routes.js'></script>

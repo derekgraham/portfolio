@@ -9,7 +9,7 @@
     return filter({myProjects: Project.all});
   };
 
-  Handlebars.registerHelper('list', function(items, options) {
+  Handlebars.registerHelper('cat_list', function(items, options) {
     var out = '';
     for(var i=0, l = items.length; i<l; i++) {
       if (!out.includes(options.fn(items[i]))){
@@ -18,7 +18,6 @@
     }
     return out;
   });
-
 
   portfolioPage.handleCategoryFilter = function() {
     $('#category-filter').on('change', function() {
@@ -68,4 +67,3 @@
   };
   module.portfolioPage = portfolioPage;
 })(window);
-

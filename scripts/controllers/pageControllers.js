@@ -11,13 +11,13 @@
     $('.tab-content').hide();
     $('#about').fadeIn(2000);
 
-  };  
+  };
 
   projectsController.index = function() {
     $('.tab-content').hide();
     $('#projects').fadeIn(2000);
 
-  };	
+  };
 
   skillsController.index = function() {
     $('.tab-content').hide();
@@ -28,13 +28,15 @@
   experienceController.index = function() {
     $('.tab-content').hide();
     $('#experience').fadeIn(2000);
+    experience.getData(experienceView.index);
 
   };
 
   reposController.index = function() {
-    // $('.tab-content').hide();
-    // $('#repos').fadeIn(2000);
-    $('#repos').fadeIn(2000).siblings().hide();
+    console.log('repos controller');
+    $('.tab-content').hide();
+    $('#repos').fadeIn(2000);
+    // $('#repos').fadeIn(2000).siblings().hide();
     repos.requestRepos(repoView.index);
 
   };
@@ -46,5 +48,3 @@
   module.reposController = reposController;
 
 })(window);
-
-
